@@ -1,0 +1,111 @@
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Impact', sans-serif;
+  }
+
+/* Секція проектів */
+.projects-section {
+        width: 100%;
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 20px;
+        box-sizing: border-box;  
+}
+
+/* Заголовок по центру */
+.projects-title {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 123%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--black);
+    margin-bottom: 20px;
+    white-space: nowrap; 
+    text-align: center;
+}
+
+.black-text {
+    color: #292929;
+}
+
+.green-text {
+    color: #00B068;
+}
+
+/* Список проектів */
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Окремий проект */
+.project-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* важливо: елементи вирівняні ЗЛІВА */
+}
+
+/* Картинка проекту */
+.project-picture {
+    width: 100%;
+    max-width: 320px;
+}
+
+.project-image {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+/* Інформація про проект */
+.project-info {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* також ВИРІВНЯТИ ТЕКСТ ЗЛІВА */
+    gap: 10px;
+}
+
+.project-tech {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: var(--black);
+}
+
+.project-title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 125%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--black);
+}

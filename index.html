@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="projects-section">
+    <h2 class="projects-title">
+      <span class="black-text">MY</span> <span class="green-text">PROJECTS</span>
+    </h2>
+
+    <ul class="projects-list" id="projects-list">
+      <li class="project-item">
+        <picture class="project-picture">
+          <source 
+            srcset="./img/wallet-1x-desk.jpg 1x, ./img/wallet-2x-desk.jpg 2x"
+            media="(min-width: 1158px)" />
+          <img 
+            src="./img/wallet-1x-desk.jpg" 
+            alt="Wallet Webservice project" 
+            class="project-image" />
+        </picture>
+
+        <div class="project-info">
+          <p class="project-tech">React, JavaScript, Node.js, Git</p>
+          <h3 class="project-title">Wallet Webservice</h3>
+          <a href="https://github.com/Andrianchik/js-project.git" target="_blank" class="visit-button">
+            Visit
+            <img src="./img/icon.svg" alt="Arrow" class="visit-icon">
+          </a>
+        </div>
+      </li>
+    </ul>
+
+    <button class="load-more-btn" id="load-more-btn" type="button">Load More</button>
+  </section>
+</body>
+</html>

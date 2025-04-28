@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects</title>
+  <title>Мої проекти</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,30 +13,78 @@
       <span class="black-text">MY</span> <span class="green-text">PROJECTS</span>
     </h2>
 
-    <ul class="projects-list" id="projects-list">
+    <ul class="projects-list">
+      
+      <!-- Проект 1 -->
       <li class="project-item">
         <picture class="project-picture">
-          <source 
-            srcset="./img/wallet-1x-desk.jpg 1x, ./img/wallet-2x-desk.jpg 2x"
-            media="(min-width: 1158px)" />
-          <img 
-            src="./img/wallet-1x-desk.jpg" 
-            alt="Wallet Webservice project" 
-            class="project-image" />
+          <source srcset="./img/wallet-1x-desk.jpg 1x, ./img/wallet-2x-desk.jpg 2x" media="(min-width: 1158px)">
+          <img src="./img/wallet-1x-desk.jpg" alt="Wallet Webservice" class="project-image">
         </picture>
 
         <div class="project-info">
           <p class="project-tech">React, JavaScript, Node.js, Git</p>
-          <h3 class="project-title">Wallet Webservice</h3>
-          <a href="https://github.com/Andrianchik/js-project.git" target="_blank" class="visit-button">
-            Visit
-            <img src="./img/icon.svg" alt="Arrow" class="visit-icon">
-          </a>
+
+          <div class="project-header">
+            <h3 class="title">Wallet Webservice</h3>
+            <div class="visit-button-wrapper">
+              <a href="https://github.com/Andrianchik/js-project.git" target="_blank" class="visit-button">
+                Visit
+                <img src="./img/icon.svg" alt="Arrow" class="visit-icon" width="24" height="24">
+              </a>
+            </div>
+          </div>
         </div>
       </li>
+
+      <!-- Проект 2 -->
+      <li class="project-item">
+        <picture class="project-picture">
+          <source srcset="./img/green-1x-desk.jpg 1x, ./img/green-2x-desk.jpg 2x" media="(min-width: 1158px)">
+          <img src="./img/green-1x-desk.jpg" alt="Green Harvest" class="project-image">
+        </picture>
+
+        <div class="project-info">
+          <p class="project-tech">HTML, CSS, JavaScript, Parcel</p>
+
+          <div class="project-header">
+            <h3 class="title">Green Harvest</h3>
+            <div class="visit-button-wrapper">
+              <a href="https://github.com/Andrianchik/team-project-green.git" target="_blank" class="visit-button">
+                Visit
+                <img src="./img/icon.svg" alt="Arrow" class="visit-icon" width="24" height="24">
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- Проект 3 -->
+      <li class="project-item">
+        <picture class="project-picture">
+          <source srcset="./img/energy-1x-desk.jpg 1x, ./img/energy-2x-desk.jpg 2x" media="(min-width: 1158px)">
+          <img src="./img/energy-1x-desk.jpg" alt="Energy Flow" class="project-image">
+        </picture>
+
+        <div class="project-info">
+          <p class="project-tech">HTML, CSS, JavaScript, Vite</p>
+
+          <div class="project-header">
+            <h3 class="title">Energy Flow</h3>
+            <div class="visit-button-wrapper">
+              <a href="https://github.com/Andrianchik/energy-flow.git" target="_blank" class="visit-button">
+                Visit
+                <img src="./img/icon.svg" alt="Arrow" class="visit-icon" width="24" height="24">
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+
     </ul>
 
-    <button class="load-more-btn" id="load-more-btn" type="button">Load More</button>
+    <button class="load-more-btn" type="button">Load More</button>
   </section>
+  <script src="./button.js"></script>
 </body>
 </html>

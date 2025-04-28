@@ -1,48 +1,85 @@
-const projectsContainer = document.getElementById('projects-container');
-const loadMoreBtn = document.getElementById('load-more-btn');
+const projectsContainer = document.querySelector('.projects-list');
+const loadMoreBtn = document.querySelector('.load-more-btn');
 
 const newProjects = [
   {
-    img: 'images/project4.jpg',
-    tech: 'React, Node.js, MongoDB',
-    title: 'New Project 1',
-    link: 'https://github.com/project4'
+    img: './img/power-1x-desk.jpg',
+    tech: 'React, JavaScript, Node.js, Git',
+    title: 'power pulse webservice',
+    link: 'https://github.com/Andrianchik/js-project.git'
   },
   {
-    img: 'images/project5.jpg',
-    tech: 'Vue, Firebase',
-    title: 'New Project 2',
-    link: 'https://github.com/project5'
+    img: './img/mimino-1x-desk.jpg',
+    tech: 'React, JavaScript, Node.js, Git',
+    title: 'mimino website',
+    link: 'https://github.com/Andrianchik/js-project.git'
   },
   {
-    img: 'images/project6.jpg',
-    tech: 'Angular, Express.js',
-    title: 'New Project 3',
-    link: 'https://github.com/project6'
+    img: './img/vyshyvanka-1x-desk.jpg',
+    tech: 'React, JavaScript, Node.js, Git',
+    title: 'vyshyvanka vibes Landing Page',
+    link: 'https://github.com/Andrianchik/js-project.git'
+  },
+  {
+    img: './img/chego-1x-desk.jpg',
+    tech: 'React, JavaScript, Node.js, Git',
+    title: 'chego jewelry website',
+    link: 'https://github.com/Andrianchik/js-project.git'
+  },
+  {
+    img: './img/energy-1x-desk.jpg',
+    tech: 'React, JavaScript, Node.js, Git',
+    title: 'energy flow webservice',
+    link: 'https://github.com/Andrianchik/js-project.git'
+  },
+  {
+    img: './img/fruitbox-1x-desk.jpg',
+    tech: 'React, JavaScript, Node.js, Git',
+    title: 'fruitbox online store',
+    link: 'https://github.com/Andrianchik/js-project.git'
+  },
+  {
+    img: './img/starlight-1x-desk.jpg',
+    tech: 'React, JavaScript, Node.js, Git',
+    title: 'starlight studio landing page',
+    link: 'https://github.com/Andrianchik/js-project.git'
   }
 ];
 
-loadMoreBtn.addEventListener('click', () => {
-  newProjects.forEach(project => {
-    const card = document.createElement('div');
-    card.classList.add('project-card');
+let projectIndex = 0;
 
-    card.innerHTML = `
-      <img src="${project.img}" alt="${project.title}" class="project-image">
+loadMoreBtn.addEventListener('click', () => {
+  const projectsToLoad = newProjects.slice(projectIndex, projectIndex + 3);
+
+  projectsToLoad.forEach(project => {
+    const li = document.createElement('li');
+    li.classList.add('project-item');
+
+    li.innerHTML = `
+      <picture class="project-picture">
+        <img src="${project.img}" alt="${project.title}" class="project-image">
+      </picture>
+
       <div class="project-info">
         <p class="project-tech">${project.tech}</p>
-        <h3 class="project-title">${project.title}</h3>
-        <a href="${project.link}" class="visit-button" target="_blank">
-          Visit
-          <img src="images/arrow.svg" alt="Arrow" class="visit-icon">
-        </a>
+        <div class="project-header">
+          <h3 class="title">${project.title}</h3>
+          <div class="visit-button-wrapper">
+            <a href="${project.link}" target="_blank" class="visit-button">
+              Visit
+              <img src="./img/icon.svg" alt="Arrow" class="visit-icon" width="24" height="24">
+            </a>
+          </div>
+        </div>
       </div>
     `;
 
-    // Додаємо нові картки перед кнопкою Load More
-    projectsContainer.insertBefore(card, loadMoreBtn);
+    projectsContainer.appendChild(li);
   });
 
-  // Після додавання нових проектів - ховаємо кнопку
-  loadMoreBtn.style.display = 'none';
+  projectIndex += 3;
+
+  if (projectIndex >= newProjects.length) {
+    loadMoreBtn.style.display = 'none';
+  }
 });
